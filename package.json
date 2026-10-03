@@ -1,0 +1,15 @@
+{
+    "name": "mail-log-statamic",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite build --watch",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@statamic/cms": "file:./vendor/statamic/cms/resources/dist-package",
+        "laravel-vite-plugin": "^2.1.0",
+        "vite": "^7.0.0",
+        "vue": "^3.5.31"
+    }
+}
