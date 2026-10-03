@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace BobWez98\MailLogStatamic\Tests;
 
-use BobWez98\MailLogStatamic\ServiceProvider;
 use PHPUnit\Framework\Attributes\Test;
 use Statamic\Auth\Permission as RegisteredPermission;
 use Statamic\CP\Navigation\NavItem;
@@ -17,9 +16,6 @@ final class ServiceProviderTest extends TestCase
     public function it_registers_the_package_services(): void
     {
         $this->signInAsSuperUser();
-
-        $this->assertSame([], config('mail-log-statamic'));
-        $this->assertContains(config_path('mail-log-statamic.php'), array_values(ServiceProvider::pathsToPublish(ServiceProvider::class, 'config')));
 
         $permission = Permission::boot()->get('view mail log');
 

@@ -4,21 +4,21 @@ declare(strict_types=1);
 
 namespace BobWez98\MailLogStatamic;
 
+use Override;
 use Statamic\Auth\Permission;
 use Statamic\CP\Navigation\Nav as Navigation;
 use Statamic\Facades\CP\Nav;
 use Statamic\Facades\Permission as PermissionFacade;
 use Statamic\Providers\AddonServiceProvider;
-use Override;
 
 class ServiceProvider extends AddonServiceProvider
 {
-    #[\Override]
+    #[Override]
     protected $routes = [
         'cp' => __DIR__.'/../routes/cp.php',
     ];
 
-    #[\Override]
+    #[Override]
     protected $vite = [
         'input' => [
             'resources/js/cp.js',
