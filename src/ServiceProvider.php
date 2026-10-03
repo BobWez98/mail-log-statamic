@@ -9,6 +9,7 @@ use Statamic\CP\Navigation\Nav as Navigation;
 use Statamic\Facades\CP\Nav;
 use Statamic\Facades\Permission as PermissionFacade;
 use Statamic\Providers\AddonServiceProvider;
+use Override;
 
 class ServiceProvider extends AddonServiceProvider
 {
@@ -25,23 +26,7 @@ class ServiceProvider extends AddonServiceProvider
         'publicDirectory' => 'resources/dist',
     ];
 
-    #[\Override]
-    public function register(): void
-    {
-        parent::register();
-
-        $this
-            ->registerConfig();
-    }
-
-    protected function registerConfig(): static
-    {
-        $this->mergeConfigFrom(__DIR__.'/../config/mail-log-statamic.php', 'mail-log-statamic');
-
-        return $this;
-    }
-
-    #[\Override]
+    #[Override]
     protected function bootConfig(): static
     {
         $this->publishes([
@@ -51,7 +36,7 @@ class ServiceProvider extends AddonServiceProvider
         return $this;
     }
 
-    #[\Override]
+    #[Override]
     public function bootAddon(): void
     {
         $this
