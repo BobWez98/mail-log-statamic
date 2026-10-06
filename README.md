@@ -9,7 +9,7 @@ This add-on provides the Statamic interface for [Laravel Mail Log](https://githu
 
 ## Requirements
 
-- PHP 8.5+
+- PHP 8.4+
 - Laravel 13
 - Statamic 6
 - Database connection
@@ -42,7 +42,7 @@ Run the migrations supplied by the base package to create the `mail_logs` table:
 php artisan migrate
 ```
 
-Grant the **View mail log** permission to every Statamic role that should be able to inspect logged emails. Super users have access automatically.
+The **View mail log** permission shows every outgoing email, including password-reset links. Site owners should only grant it to trusted roles. Super users have access automatically.
 
 ## Configuration
 
