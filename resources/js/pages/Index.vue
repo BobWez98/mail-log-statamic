@@ -58,13 +58,11 @@ const columns = [
 const statusColors = {
     success: 'green',
     pending: 'amber',
-    failed: 'red',
 }
 
 const statusLabels = {
     success: __('Sent'),
     pending: __('Pending'),
-    failed: __('Failed'),
 }
 
 const dateFormatter = new Intl.DateTimeFormat(undefined, {
