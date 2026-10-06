@@ -13,12 +13,10 @@ use Statamic\Providers\AddonServiceProvider;
 
 class ServiceProvider extends AddonServiceProvider
 {
-    #[Override]
     protected $routes = [
         'cp' => __DIR__.'/../routes/cp.php',
     ];
 
-    #[Override]
     protected $vite = [
         'input' => [
             'resources/js/cp.js',
