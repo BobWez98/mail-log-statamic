@@ -9,7 +9,7 @@ This add-on provides the Statamic interface for [Laravel Mail Log](https://githu
 
 ## Requirements
 
-- PHP 8.5+
+- PHP 8.4+
 - Laravel 13
 - Statamic 6
 - Database connection
