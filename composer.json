@@ -13,7 +13,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.4",
-        "bobwez98/mail-log-laravel": "^1.0",
+        "bobwez98/mail-log-laravel": "^1.1",
         "laravel/framework": "^13.0",
         "statamic/cms": "^6.0"
     },

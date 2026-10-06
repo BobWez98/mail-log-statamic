@@ -38,7 +38,7 @@ class ServiceProvider extends AddonServiceProvider
             PermissionFacade::register('view mail log', function (Permission $permission): void {
                 $permission
                     ->label(__('View mail log'))
-                    ->description(__('Gives the user access to view logged emails.'));
+                    ->description(__('Allows the user to view every outgoing email, including password-reset links. Only grant this permission to trusted roles.'));
             });
         });
 

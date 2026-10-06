@@ -21,6 +21,7 @@ final class ServiceProviderTest extends TestCase
 
         $this->assertInstanceOf(RegisteredPermission::class, $permission);
         $this->assertSame('View mail log', $permission->label());
+        $this->assertSame('Allows the user to view every outgoing email, including password-reset links. Only grant this permission to trusted roles.', $permission->description());
 
         $mailLogNavigation = Nav::build()
             ->pluck('items')
