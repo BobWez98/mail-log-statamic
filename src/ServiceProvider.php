@@ -13,28 +13,16 @@ use Statamic\Providers\AddonServiceProvider;
 
 class ServiceProvider extends AddonServiceProvider
 {
-    #[Override]
     protected $routes = [
         'cp' => __DIR__.'/../routes/cp.php',
     ];
 
-    #[Override]
     protected $vite = [
         'input' => [
             'resources/js/cp.js',
         ],
         'publicDirectory' => 'resources/dist',
     ];
-
-    #[Override]
-    protected function bootConfig(): static
-    {
-        $this->publishes([
-            __DIR__.'/../config/mail-log-statamic.php' => config_path('mail-log-statamic.php'),
-        ], 'config');
-
-        return $this;
-    }
 
     #[Override]
     public function bootAddon(): void

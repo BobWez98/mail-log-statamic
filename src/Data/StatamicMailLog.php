@@ -23,7 +23,6 @@ use BobWez98\MailLog\Models\MailLog;
  */
 class StatamicMailLog extends Data
 {
-    #[\Override]
     protected array $rules = [
         'id' => 'required|integer',
         'messageId' => 'required|uuid',
