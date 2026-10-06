@@ -27,16 +27,6 @@ class ServiceProvider extends AddonServiceProvider
     ];
 
     #[Override]
-    protected function bootConfig(): static
-    {
-        $this->publishes([
-            __DIR__.'/../config/mail-log-statamic.php' => config_path('mail-log-statamic.php'),
-        ], 'config');
-
-        return $this;
-    }
-
-    #[Override]
     public function bootAddon(): void
     {
         $this
