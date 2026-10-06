@@ -19,7 +19,7 @@ This add-on provides the Statamic interface for [Laravel Mail Log](https://githu
 
 - Adds a paginated mail log to the Statamic Control Panel
 - Orders logged emails newest first
-- Displays sent, pending, and failed delivery statuses
+- Displays sent and pending delivery statuses
 - Shows sender, recipient, subject, message ID, and timestamps
 - Renders HTML emails in a sandboxed preview
 - Blocks scripts and remote resources inside previews
