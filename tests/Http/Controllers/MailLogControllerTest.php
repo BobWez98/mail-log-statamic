@@ -85,6 +85,38 @@ final class MailLogControllerTest extends TestCase
     }
 
     #[Test]
+    public function it_shows_a_mail_log_without_a_subject(): void
+    {
+        $this->signInAsSuperUser();
+
+        $mailLog = $this->createMailLog(['subject' => '']);
+
+        $this
+            ->get($this->cpRoute('mail-log-statamic.show', $mailLog->id))
+            ->assertOk()
+            ->assertInertia(fn (Assert $page): Assert => $page
+                ->component('mail-log-statamic::Show')
+                ->where('mailLog.id', $mailLog->id)
+                ->where('mailLog.subject', ''));
+    }
+
+    #[Test]
+    public function it_shows_a_mail_log_without_a_recipient(): void
+    {
+        $this->signInAsSuperUser();
+
+        $mailLog = $this->createMailLog(['to' => '']);
+
+        $this
+            ->get($this->cpRoute('mail-log-statamic.show', $mailLog->id))
+            ->assertOk()
+            ->assertInertia(fn (Assert $page): Assert => $page
+                ->component('mail-log-statamic::Show')
+                ->where('mailLog.id', $mailLog->id)
+                ->where('mailLog.to', ''));
+    }
+
+    #[Test]
     public function it_returns_a_sandboxed_mail_preview(): void
     {
         $this->signInAsSuperUser();
