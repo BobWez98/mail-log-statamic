@@ -1,8 +1,8 @@
 <template>
-    <Head :title="mailLog.subject" />
+    <Head :title="mailLog.subject || __('(No subject)')" />
 
     <div class="max-w-5xl 3xl:max-w-6xl mx-auto" data-max-width-wrapper>
-        <Header :title="mailLog.subject" icon="mail">
+        <Header :title="mailLog.subject || __('(No subject)')" icon="mail">
             <Button :href="indexUrl" icon="arrow-left" :text="__('Back to mail log')" />
         </Header>
 

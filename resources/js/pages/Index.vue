@@ -18,7 +18,7 @@
         >
             <template #cell-subject="{ row, value }">
                 <Link :href="row.show_url" class="font-medium text-blue-600 hover:text-blue-700">
-                    {{ value }}
+                    {{ value || __('(No subject)') }}
                 </Link>
             </template>
 
