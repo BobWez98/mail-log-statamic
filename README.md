@@ -75,19 +75,19 @@ Open **Tools > Mail Log** in the Statamic Control Panel. Users must be super use
 
 Browse logged emails, inspect their delivery status, and use Statamic's pagination controls to move through the results.
 
-![Mail log overview](.github/art/index.png)
+![Mail log overview](https://raw.githubusercontent.com/BobWez98/mail-log-statamic/master/.github/art/index.png)
 
 ### Delivery details
 
 Open a message to view its status, sender, recipient, timestamps, and unique message ID.
 
-![Mail delivery details](.github/art/show_details.png)
+![Mail delivery details](https://raw.githubusercontent.com/BobWez98/mail-log-statamic/master/.github/art/show_details.png)
 
 ### Email preview
 
 Review the rendered HTML email without allowing its content to execute scripts or load remote resources.
 
-![Sandboxed email preview](.github/art/show_preview.png)
+![Sandboxed email preview](https://raw.githubusercontent.com/BobWez98/mail-log-statamic/master/.github/art/show_preview.png)
 
 ## Quality
 
